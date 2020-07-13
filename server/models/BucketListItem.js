@@ -1,16 +1,17 @@
-const {Schema, model} = require('mongoose')
+
+const { Schema, model } = require('mongoose')
 
 const BucketListItemSchema = new Schema({
-    description:{
-        type:String,
-        required:true,
+    description: {
+        type: String,
+        required: true,
     },
-    date:{
-        type:Date,
-        default: Date.now
-    }
+    date: {
+        type: Date,
+        default: Date.now,
+    },
 })
 
-const BucketListItem = model('bucketListItem',BucketListItemSchema)
+const BucketListItem = model('bucketListItem', BucketListItemSchema)
 
-model.exports = BucketListItem
+module.exports = BucketListItem

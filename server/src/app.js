@@ -22,7 +22,7 @@ mongoose
     .then(()=>console.log('MongoDb Database Connected...'))
     .catch((err)=> console.log(err))
 
-app.use('../api/bucketListItems',bucketListItemRoutes)
+app.use('/api/bucketListItems',bucketListItemRoutes)
 
 app.get('/',(req,res)=>{
     res.send("Hello World");
